@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2020",
+    "lib": ["ES2020"],
+
+    /* Modules */
+    "module": "NodeNext",                               /* Для ESM + TS */
+    "moduleResolution": "NodeNext",
+    "rootDir": "./src",                                 /* Только src компилируем */
+    "outDir": "./build",                                /* Куда складывать сборку */
+    "resolveJsonModule": true,                          /* Импорт .json */
+    "esModuleInterop": true,                            /* Поддержка CommonJS */
+    "allowSyntheticDefaultImports": true,
+
+    /* Дополнительно */
+    "strict": true,                                     /* Строгая проверка типов */
+    "skipLibCheck": true,                               /* Пропускаем типизацию node_modules */
+    "forceConsistentCasingInFileNames": true,           /* Проверка регистра в импортируемых путях */
+    "allowJs": true,                                    /* Разрешаем .js */
+    "checkJs": false,                                   /* Не проверяем ошибки в .js */
+
+    /* Типы */
+    "typeRoots": ["./types", "./node_modules/@types"]   /* Чтобы видеть swagger-ui-dist.d.ts */
+  },
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules", "build"],
+
+}

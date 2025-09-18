@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Time Control API",
+    "version": "1.0.0",
+    "description": "Документация API для контроля рабочего времени"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3555",
+      "description": "Local dev server"
+    }
+  ],
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Проверка работы сервера",
+        "responses": {
+          "200": {
+            "description": "Успешный ответ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "pong"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

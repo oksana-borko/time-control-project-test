@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "1a971e44-1266-4090-b002-bf02d3efc5b3",
+		"name": "TimeControl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18222058",
+		"_collection_link": "https://warped-trinity-518501.postman.co/workspace/Java-27-30~7e240191-0474-4dff-9cb1-998a344b302c/collection/18222058-1a971e44-1266-4090-b002-bf02d3efc5b3?action=share&source=collection_link&creator=18222058"
+	},
+	"item": [
+		{
+			"name": "Accounting",
+			"item": [
+				{
+					"name": "GetAllEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3555/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3555",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HireEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Ostap\",\r\n    \"lastName\":\"Bender\",\r\n    \"id\":\"123456789\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3555/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3555",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FireEmployee",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllEmployeesWithPagination",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePassword",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShiftControl",
+			"item": [
+				{
+					"name": "StartShift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3555/shifts/start?tabNum=c050391e-80a8-4334-ae79-c93aaf284067",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3555",
+							"path": [
+								"shifts",
+								"start"
+							],
+							"query": [
+								{
+									"key": "tabNum",
+									"value": "c050391e-80a8-4334-ae79-c93aaf284067"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FinishShift",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3555/shifts/finish?tabNum=c050391e-80a8-4334-ae79-c93aaf284067",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3555",
+							"path": [
+								"shifts",
+								"finish"
+							],
+							"query": [
+								{
+									"key": "tabNum",
+									"value": "c050391e-80a8-4334-ae79-c93aaf284067"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
